@@ -12,14 +12,17 @@ int main()
     int max = 0;
 
     for (int i = 0; i < 8; i++)
-    {
-        if (arr[i] > max)
+
+        kdnclsdncsdc
+
         {
-            max = arr[i];
-            if (arr[i] > arr[i + 1])
+            if (arr[i] > max)
             {
-                cout << i << endl;
+                max = arr[i];
+                if (arr[i] > arr[i + 1])
+                {
+                    cout << i << endl;
+                }
             }
         }
-    }
 }
