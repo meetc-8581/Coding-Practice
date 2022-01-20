@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
 
 using namespace std;
 
@@ -13,16 +13,14 @@ int main()
 
     for (int i = 0; i < 8; i++)
 
-        kdnclsdncsdc
-
+    {
+        if (arr[i] > max)
         {
-            if (arr[i] > max)
+            max = arr[i];
+            if (arr[i] > arr[i + 1])
             {
-                max = arr[i];
-                if (arr[i] > arr[i + 1])
-                {
-                    cout << i << endl;
-                }
+                cout << i << endl;
             }
         }
+    }
 }
