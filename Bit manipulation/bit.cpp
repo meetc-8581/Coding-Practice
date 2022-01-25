@@ -42,7 +42,7 @@ int numberOfOnes(int n)
 int main()
 {
 
-    cout << getBit(1, 0) << endl;
+    cout << getBit(3, 3) << endl;
 
     cout << setBit(5, 1) << endl;
 
