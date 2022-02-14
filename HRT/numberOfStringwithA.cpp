@@ -28,7 +28,6 @@ int solution(string &S)
     for (int i = 0; i < S.length(); i++)
     {
         if (S[i] == 'a')
-
             count++;
         if (count == numOfAs)
         {
