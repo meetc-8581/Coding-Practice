@@ -4,11 +4,6 @@ using namespace std;
 
 string funct(string a)
 {
-    int a;
-    char b;
-    string s;
-
-    return a;
 }
 
 int main()
