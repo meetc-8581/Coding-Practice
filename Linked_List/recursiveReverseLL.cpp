@@ -37,14 +37,14 @@ void insertAtTail(node *&head, int val)
 
 node *reverse(node *&head)
 {
-    cout << head->data << endl;
-    if (head == NULL || head->next == NULL)
+    if (head->next == NULL)
     {
-        cout << "null encountred" << endl;
         return head;
     }
+    cout << head->data << endl;
     node *newhead = reverse(head->next);
-    head->next->next = head;
+    node *temp = head->next;
+    temp->next = head;
     head->next = NULL;
     return newhead;
 }
@@ -61,6 +61,19 @@ void display(node *head)
     cout << "NULL" << endl;
 }
 
+void displayRev(node *head)
+{
+    // node *temp = head;
+    if (head == NULL)
+    {
+        cout << endl;
+        return;
+    }
+    displayRev(head->next);
+    cout << head->data << "->";
+    return;
+}
+
 int main()
 {
 
@@ -71,10 +84,23 @@ int main()
     insertAtTail(head, 3);
 
     display(head);
+    displayRev(head);
 
     node *newhead = reverse(head);
 
     display(newhead);
+    displayRev(newhead);
 
     return 0;
 }
+
+// cout << head->data << endl;
+// if (head == NULL || head->next == NULL)
+// {
+//     cout << "null encountred" << endl;
+//     return head;
+// }
+// node *newhead = reverse(head->next);
+// head->next->next = head;
+// head->next = NULL;
+// return newhead;

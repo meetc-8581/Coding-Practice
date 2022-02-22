@@ -35,18 +35,24 @@ void insertAtTail(node *&head, int val)
     return;
 }
 
-node *reverse(node *head)
+node *reverseKNodes(node *head, int k)
 {
 
-    node *curr = head;
     node *prev = NULL;
+    node *curr = head;
     node *next;
-    while (curr != NULL)
+    int i = 0;
+    while (i < k && curr != NULL)
     {
         next = curr->next;
         curr->next = prev;
         prev = curr;
         curr = next;
+        i++;
+    }
+    if (next != NULL)
+    {
+        head->next = reverseKNodes(next, k);
     }
     return prev;
 }
@@ -71,10 +77,13 @@ int main()
     insertAtTail(head, 1);
     insertAtTail(head, 2);
     insertAtTail(head, 3);
+    insertAtTail(head, 4);
+    insertAtTail(head, 5);
+    // insertAtTail(head, 6);
 
     display(head);
 
-    node *newhead = reverse(head);
+    node *newhead = reverseKNodes(head, 3);
 
     display(newhead);
 
