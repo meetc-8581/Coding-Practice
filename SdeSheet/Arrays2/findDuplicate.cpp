@@ -6,17 +6,6 @@ using namespace std;
 
 int findDuplicate(vector<int> &nums)
 {
-    // map<int, int> h;
-    // for (auto i : nums)
-    // {
-    //     h[i]++;
-    // }
-
-    // for (auto i : h)
-    // {
-    //     cout << i << endl;
-    // }
-    // cout << h[9] << endl;
 
     int s = nums[0];
     int f = nums[0];
@@ -49,11 +38,5 @@ int main()
     }
 
     cout << findDuplicate(nums) << endl;
-
-    // for (int i = 0; i < n; i++)
-    // {
-    //     cout << nums[i] << " ";
-    // }
-    // cout << endl;
     return 0;
 }
